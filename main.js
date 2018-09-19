@@ -17,17 +17,26 @@ const activatesDeletes = () => {
         }) 
     }
 }
+// Other way to do the top function
+
+// document.querySelector("body").addEventListener("click", function(event) {
+//     if(event.target.classList.contains('deleteButton')) {
+//         const buttonClicked = event.target;
+//         const cardToDelete = buttonClicked.parentNode.parentNode;
+//         cardToDelete.remove();
+//     }
+// })
 
 const printToDom = (stringToPrint, whereToPrint) => {
     document.getElementById(whereToPrint).innerHTML += stringToPrint;
 }
 
 const buildNewToDoCard = (toDo, notes) => {
-    let  domString =`<div class="card" style="width: 18rem;">
+    let  domString =`<div class="card w-25 m-2">
     <div class="card-body">
       <h5 class="card-title">${toDo}</h5>
       <p class="card-text">${notes}</p>
-      <button href="#" class="btn btn-primary deleteButton">Delete</button>
+      <button href="#" class="btn btn-danger deleteButton">Delete</button>
     </div>
   </div>`;
 
@@ -40,3 +49,10 @@ submitToDoButtonElem.addEventListener('click', (e)=>{
 
     buildNewToDoCard(toDoInputElem.value, notesInputElem.value);
 });
+
+// document.getElementsByTagName('form')[0].addEventListener('submit', (e) => {
+//     e.preventDefault();
+
+//     buildNewToDoCard(toDoInputElem.value, notesInputElem.value);
+
+// })
