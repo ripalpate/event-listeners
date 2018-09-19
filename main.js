@@ -33,7 +33,7 @@ const printToDom = (stringToPrint, whereToPrint) => {
 
 const buildNewToDoCard = (toDo, notes) => {
     let  domString =`<div class="card w-25 m-2">
-    <div class="card-body">
+    <div class="card-body" >
       <h5 class="card-title">${toDo}</h5>
       <p class="card-text">${notes}</p>
       <button href="#" class="btn btn-danger deleteButton">Delete</button>
