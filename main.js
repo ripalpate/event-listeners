@@ -4,7 +4,7 @@ const notesInputElem = document.getElementById('notesInput');
 const submitToDoButtonElem = document.getElementById('submitToDoButton');
 const activatesDeletes = () => {
     const deleteButtons= document.getElementsByClassName('deleteButton');
-    console.log(deleteButtons);
+    // console.log(deleteButtons);
     for (let i = 0; i < deleteButtons.length; i++) {
         const element = deleteButtons[i];
         element.addEventListener('click', (e) => {
@@ -23,7 +23,7 @@ const printToDom = (stringToPrint, whereToPrint) => {
 }
 
 const buildNewToDoCard = (toDo, notes) => {
-    let domString =`<div class="card" style="width: 18rem;">
+    let  domString =`<div class="card" style="width: 18rem;">
     <div class="card-body">
       <h5 class="card-title">${toDo}</h5>
       <p class="card-text">${notes}</p>
